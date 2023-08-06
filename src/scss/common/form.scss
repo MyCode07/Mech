@@ -1,0 +1,138 @@
+.form {
+    // .form__rows
+
+    &__rows {
+        // .form__rows-item
+
+        &-item {
+        }
+
+        // .form__rows-content
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                }
+            }
+        }
+
+        &-left,
+        &-right {
+        }
+
+        // .form__rows-left
+
+        &-left {
+        }
+
+        // .form__rows-right
+
+        &-right {
+        }
+    }
+
+    // .form__input
+
+    &__input {
+        // form__input-file
+
+        &-file {
+            border-bottom: unset;
+
+            .file-label {
+            }
+
+            .file-input {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                // .file-input__body
+
+                &__body {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                img {
+                }
+
+                input {
+                    display: none;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // .form__radio
+
+    &__radio {
+        .form__input {
+            div {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                input {
+                    height: 30px;
+                    width: 30px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                    z-index: 5;
+
+                    &:checked + .checkmark {
+                        background-image: url("@img/svg/checked.svg");
+                    }
+                }
+
+                label {
+                }
+
+                .checkmark {
+                    position: relative;
+                    height: 30px;
+                    flex: 0 0 30px;
+                    width: 30px;
+                    background-color: unset;
+                    border: 1px solid #fff;
+                    border-radius: 5px;
+                    pointer-events: none;
+
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    .answer {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+
+        &._active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
