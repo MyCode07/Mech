@@ -41,18 +41,18 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" data-replace-width="768">
         <div class="section__container _container">
             <div class="section__body">
                 <div class="section__flex">
                     <div class="section__left">
-                        <div class="welcome-gallery">
+                        <div class="welcome-gallery" data-replace-new-position="beforeend">
                             <img src="img/home/welcom-1.png" alt="">
                             <img src="img/home/welcom-2.png" alt="">
                         </div>
                     </div>
                     <div class="section__right">
-                        <div class="welcome-content">
+                        <div class="welcome-content" data-replace-old-position="beforeend">
                             <h2>WELCOME TO OUR CHAIR SHOP WHERE TIMELESS AND STYLISH DESIGNS MEET STORYTELLING.</h2>
                             <p>Every chair in our collection tells a personal story. Individually designed and
                                 personalized to enhance the aesthetics
@@ -69,7 +69,7 @@
                                     </svg>
                                 </div>
                             </a>
-                            <img src="img/home/welcom-3.png" alt="">
+                            <img src="img/home/welcom-3.png" alt="" data-replace-element>
                         </div>
                     </div>
                 </div>
@@ -194,7 +194,6 @@
                         <label>$ 20,000</label>
                     </div>
                 </article>
-
             </div>
         </div>
     </section>
@@ -259,7 +258,7 @@
 
     <section class="fullscreen">
         <div class="fullscreen__container">
-            <div class="fullscreen__img">
+            <div class="fullscreen__img _bottom">
                 <img src="img/fullscreen-img-2.png" alt="">
             </div>
             <div class="fullscreen__body _container">
@@ -289,12 +288,12 @@
         </div>
     </section>
 
-    <section class="minimalist">
+    <section class="minimalist" data-replace-width="768">
         <div class="minimalist__container _container">
-            <div class="minimalist__body">
-                <img class="minimalist__bigimg" src="img/minimalist-big.png" alt="">
+            <div class="minimalist__body" data-replace-old-position="afterbegin">
+                <img class="minimalist__bigimg" src="img/minimalist-big.png" alt="" data-replace-element>
                 <div class="minimalist__info">
-                    <div>
+                    <div class="minimalist__info-content">
                         <h2>Minimalist <br>
                             and modern design</h2>
                         <p>If you value clean lines, sleek silhouettes and a modern aesthetic, you will fall in love
@@ -302,6 +301,7 @@
                             a dining chair, an office chair or an accent chair, our collection is curated to suit a wide
                             range of spaces and
                             preferences.</p>
+
                         <a href="" class="_button _button-dark">
                             <label class="_button-words">
                                 <span class="span1">Discover collection</span>
@@ -315,7 +315,10 @@
                             </div>
                         </a>
                     </div>
-                    <img class="minimalist__smallimg" src="img/minimalist-small.png" alt="">
+
+                    <div class="minimalist__images" data-replace-new-position="afterbegin">
+                        <img class="minimalist__smallimg" src="img/minimalist-small.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>

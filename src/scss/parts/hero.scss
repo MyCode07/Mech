@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     background-color: #4d3d30;
-    margin-bottom: 250px;
+    @include adaptive-value("margin-bottom", 250, 100, 1);
 
     // .hero__bgi
 

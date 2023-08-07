@@ -1,5 +1,5 @@
 .section {
-    margin-bottom: 250px;
+    @include adaptive-value("margin-bottom", 250, 100, 1);
 
     // .section__container
 
@@ -63,6 +63,14 @@
             transform: translate(70%, 35%);
         }
 
+        & > :nth-child(3) {
+            position: absolute;
+            top: -20px;
+            right: 0;
+
+            @include adaptive-value("width", 338, 135, 1);
+
+        }
     }
 
     // .welcome-content
@@ -104,18 +112,6 @@
 
             @media (max-width: 992px) {
                 transform: translate(0, -20%);
-            }
-
-            @media (max-width: 768px) {
-                transform: translate(25%, -20%);
-            }
-
-            @media (max-width: 425px) {
-                transform: translate(39%, -22%);
-            }
-
-            @media (max-width: 360px) {
-                transform: translate(55%, -20%);
             }
         }
     }

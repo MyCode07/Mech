@@ -20,18 +20,7 @@
     // .minimalist__bigimg
 
     &__bigimg {
-        @media (min-width: 769) {
-            @include adaptive-value("width", 813, 300, 1);
-            @include adaptive-value("height", 1026, 500, 1);
-            @include adaptive-value("margin-right", 96, 20, 1);
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 30px;
-
-            height: 400px;
-            object-fit: contain;
-        }
+        width: 45%;
     }
 
     // .minimalist__info
@@ -39,10 +28,25 @@
     &__info {
         display: flex;
         flex-direction: column;
+        width: 50%;
 
-        div {
+        @media (max-width: 768px) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        // .minimalist__info-content
+
+        &-content {
             flex: 1 1 auto;
             margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
             p {
                 max-width: 450px;
@@ -50,17 +54,9 @@
                 margin-top: 30px;
                 @include adaptive-value("margin-bottom", 60, 30, 1);
             }
-
-            @media (max-width: 768px) {
-                a {
-                    margin-inline: auto;
-                }
-            }
         }
 
-        @media (max-width: 768px) {
-            text-align: center;
-            align-items: center;
+        ._button {
         }
     }
 
@@ -70,6 +66,21 @@
         @media (min-width: 769px) {
             margin-left: auto;
         }
+
         @include adaptive-value("width", 616, 250, 1);
+    }
+
+    // .minimalist__images
+
+    &__images {
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+
+            img {
+                width: calc(50% - 5px);
+            }
+        }
     }
 }
