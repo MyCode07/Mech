@@ -1,0 +1,104 @@
+.products {
+    margin-bottom: 250px;
+    
+    // .products__container
+
+    &__container {
+    }
+
+    // .products__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .products__flex
+
+    &__flex {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include adaptive-value("margin-bottom", 60, 30, 1);
+
+        @media (max-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 15px;
+        }
+
+        @media (min-width: 993px) {
+            & > :not(:last-child) {
+                @include adaptive-value("margin-right", 30, 15, 1);
+            }
+        }
+    }
+}
+
+.product {
+    // .product__article
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #e8e0d4;
+        cursor: pointer;
+        @include adaptive-value("padding-top", 15, 10, 1);
+        @include adaptive-value("padding-bottom", 15, 10, 1);
+        @include adaptive-value("padding-left", 15, 10, 1);
+        @include adaptive-value("padding-right", 15, 10, 1);
+
+        max-width: 450px;
+        width: 100%;
+
+        @media (any-hover: hover) {
+            &:hover {
+                .product__article-img {
+                    img {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        // .product__article-img
+
+        &-img {
+            width: 100%;
+            flex: 1 1 auto;
+            position: relative;
+            pointer-events: none;
+            @include adaptive-value("margin-bottom", 15, 10, 1);
+
+            img {
+                @include adaptive-value("height", 306, 160, 1);
+                @include adaptive-value("width", 443, 200, 1);
+                object-fit: contain;
+                transition: all 0.3s ease 0s;
+            }
+
+            & > :nth-child(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                width: 100%;
+            }
+        }
+
+        // .product__article-info
+
+        &-info {
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

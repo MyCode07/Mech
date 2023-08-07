@@ -1,6 +1,8 @@
 // import './utils/smoothscrol.js';
 import './utils/menu.js';
 import './utils/header.js';
+import './utils/category-scroll.js';
+import './utils/fullscreen.js';
 // import './utils/animations.js';
 
 // import './utils/mouse.js';
