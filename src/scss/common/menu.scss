@@ -156,6 +156,13 @@
                     transition: all 0.3s ease 0s;
                 }
             }
+            div {
+                display: flex;
+                align-items: center;
+                & > :first-child {
+                    margin-right: 3px;
+                }
+            }
         }
 
         // .menu__bottom-socials

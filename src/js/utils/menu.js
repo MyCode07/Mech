@@ -9,7 +9,7 @@ if (burger) {
         menu.classList.toggle('_active');
         burger.classList.toggle('_active');
         header.classList.toggle('_sticky');
-        
+
     })
 }
 
@@ -24,5 +24,9 @@ for (let i = 0; i < menuLink.length; i++) {
         e.preventDefault();
         let hoverDataImg = element.closest('li').dataset.img;
         dataImg.src = hoverDataImg;
+
+
+
     });
 };
+

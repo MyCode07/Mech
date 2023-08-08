@@ -110,9 +110,6 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-color: red;
-
-        border: 1px solid #000;
 
         &._bottom {
             img {
@@ -135,6 +132,7 @@
         justify-content: center;
         height: 100%;
         margin-bottom: 0 !important;
+        color: #4d3d30;
 
         h2 {
             text-align: left;
@@ -143,21 +141,163 @@
         p {
             margin-top: 30px;
             @include adaptive-value("margin-bottom ", 60, 30, 1);
-
             max-width: 460px;
             width: 100%;
         }
     }
-}
 
-._prod {
-    // ._prod-name
+    &.comfort {
+        height: 120vh;
 
-    &-name {
+        @media (max-width: 768px) {
+            height: 70vh;
+        }
+
+        .fullscreen__container {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+        .fullscreen__body {
+            width: 40%;
+            margin-left: auto;
+            padding: 0px 25px 50px 50px;
+            height: 100%;
+            justify-content: flex-start;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                padding: 0 15px 25px 15px;
+            }
+        }
+
+        .fullscreen__info {
+            position: sticky;
+            height: fit-content;
+            top: 50px;
+
+            @media (max-width: 768px) {
+                color: #f4f0ea;
+
+                a {
+                    color: #f4f0ea;
+                    svg {
+                        stroke: #4d3d30;
+                    }
+                }
+            }
+
+            p {
+                @include adaptive-value("font-size", 36, 16, 1);
+                max-width: 700px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .fullscreen__img {
+            width: 60%;
+            z-index: 0;
+            z-index: -1;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                background-color: #4d3d30;
+                img {
+                    opacity: 0.8;
+                }
+            }
+        }
     }
 
-    // ._prod-prace
+    &.new {
+        .fullscreen__body {
+            margin-left: unset;
+            margin-right: auto;
 
-    &-prace {
+            padding: 0px 50px 50px 25px;
+        }
+
+        .fullscreen__info {
+            h2 {
+                margin-top: 30px;
+            }
+
+            p {
+                @include adaptive-value("font-size", 18, 16, 1);
+            }
+        }
+
+        .fullscreen__img {
+            right: 0;
+            margin-left: auto;
+            object-fit: contain;
+        }
+    }
+
+    &.showcases {
+        margin-bottom: 0 !important;
+        height: 100vh;
+
+        .fullscreen__body {
+            background-color: #f4f0ea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            height: fit-content;
+            padding-top: 25px;
+            padding: 25px 25px 100px 25px;
+            padding-inline: unset;
+
+            .yan__logo {
+                width: 100%;
+                padding: 25px;
+                background-color: #4d3d30;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-inline: auto;
+                margin-bottom: 70px;
+
+                svg {
+                    fill: #f4f0ea;
+                    stroke: #f4f0ea;
+                    width: 25%;
+                }
+            }
+
+            p {
+                padding: 0 65px;
+                color: #4d3d30;
+                text-align: center;
+                max-width: 600px;
+                width: 100%;
+                @include adaptive-value("margin-bottom", 60, 30, 1);
+            }
+
+            a {
+                margin: unset;
+            }
+        }
+    }
+
+    &.last {
+        .fullscreen__img {
+            img {
+                object-fit: inherit;
+            }
+        }
+
+        .fullscreen__body {
+            img {
+                margin-inline: auto;
+                @include adaptive-value("margin-bottom", 124, 60, 1);
+                @include adaptive-value("width", 360, 234, 1);
+                @include adaptive-value("height", 500, 324, 1);
+            }
+        }
     }
 }
