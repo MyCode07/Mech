@@ -36,14 +36,29 @@ if (popupOpenButtons.length) {
     })
 }
 
+const fixedElems = document.querySelectorAll('._fixed');
 
-function lockPadding() {
-    const paddingRight = 10; // scrollbarwidth
+export const lockPadding = () => {
+    console.log('lock');
+    const paddingRight = 12; // scrollbarwidth
+
+    if (fixedElems.length) {
+        fixedElems.forEach(item => {
+            item.style.paddingRight = paddingRight + 'px';
+        });
+    }
     document.body.style.paddingRight = paddingRight + 'px';
 }
 
 
-function unLockPadding() {
-    const paddingRight = 10; // scrollbarwidth
+export const unLockPadding = () => {
+    console.log('unlock');
+    const paddingRight = 12; // scrollbarwidth
+
+    if (fixedElems.length) {
+        fixedElems.forEach(item => {
+            item.style.paddingRight = 0 + 'px';
+        });
+    }
     document.body.style.paddingRight = 0 + 'px';
 }

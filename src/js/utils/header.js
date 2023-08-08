@@ -1,7 +1,7 @@
 function stickyHeader() {
     const header = document.querySelector('header._home');
     if (!header) return
-    
+
     const headerheigth = header.getBoundingClientRect().height;
 
     const hero = document.querySelector('.hero');
@@ -9,12 +9,18 @@ function stickyHeader() {
 
 
     const sticky = () => {
-        if (window.scrollY >= heroheigth - headerheigth ) header.classList.add('_sticky')
-        else header.classList.remove('_sticky')
+        if (window.scrollY >= heroheigth - headerheigth) {
+            header.classList.add('_sticky')
+            header.classList.add('_scrolled')
+        }
+        else {
+            header.classList.remove('_sticky')
+            header.classList.remove('_scrolled')
+        }
     }
 
     sticky();
-    window.addEventListener('scroll', sticky);
+    window.addEventListener('scroll', sticky); 
 }
 
 stickyHeader();

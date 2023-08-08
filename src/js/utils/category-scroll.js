@@ -2,24 +2,23 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 
 gsap.registerPlugin(ScrollTrigger);
+const processSlider = document.querySelector('.category__flex');
 
-if (window.innerWidth >= 768) {
-    const process = document.querySelector('.category__flex');
-    if ((typeof (process) != 'undefined' && process != null)) {
-        let sections = gsap.utils.toArray('.category__article');
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1.3),
-            ease: "none",
-            scrollTrigger: {
-                trigger: process,
-                markers: false,
-                scrub: 1,
-                pin: true,
-                snap: 1 / (sections.length - 1),
-                end: () => "+=" + document.querySelector(".category__flex").offsetWidth
-            },
-        });
-    }
+if (window.innerWidth >= 768 && processSlider) {
+    const slides = gsap.utils.toArray('.category__article');
+
+    let x = slides[0].getBoundingClientRect().width * (slides.length - 1) - (processSlider.offsetWidth - slides[0].getBoundingClientRect().width)
+    gsap.to(slides, {
+        x: -x,
+        ease: "none",
+        scrollTrigger: {
+            trigger: processSlider,
+            pin: true,
+            start: "center center",
+            scrub: 1,
+            invalidateOnRefresh: true,
+
+            end: () => "+=" + processSlider.offsetWidth,
+        }
+    });
 }
-
- 

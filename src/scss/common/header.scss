@@ -4,7 +4,11 @@
     left: 0;
     width: 100%;
     z-index: 99;
-    transition: all 0.3s ease 0s;
+    transition:
+        background-color 0.3s ease 0s,
+        padding-top 0.3s ease 0s,
+        box-shadow 0.3s ease 0s;
+
     background-color: transparent;
 
     @media (min-width: 769px) {
@@ -28,7 +32,6 @@
     // .header__row
 
     &__row {
-        cursor: pointer;
         flex: 1 1 auto;
     }
 
@@ -239,7 +242,7 @@
     &._sticky {
         background-color: #f4f0ea;
         padding-top: 0;
-        border-bottom: 1px solid #4d3d3013;
+        box-shadow: 0px 0px 1px 1px #4d3d3013;
 
         .header__row {
             .header__burger,
