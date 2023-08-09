@@ -1,0 +1,146 @@
+@@include('./html/head.html', {
+"title":"Product cart",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky",
+})
+
+
+<main class="cart">
+
+    <section class="item">
+        <div class="item__container  _container">
+            <div class="item__body">
+                <div class="item__images">
+                    <div class="item__images-small">
+                        <img src="img/item-big.png" alt="">
+                        <img src="img/item-big-2.png" alt="">
+                        <img src="img/item-big-3.png" alt="">
+                    </div>
+                    <div class="item__images-big">
+                        <img src="img/item-big.png" alt="">
+                        <img src="img/item-big-2.png" alt="">
+                        <img src="img/item-big-3.png" alt="">
+                    </div>
+                    <div class="item__images-qty">
+                        <span>swipe</span>
+                        <div class="item__images-count">
+                            <span class="count-dyna">2</span>
+                            <span class="count-static">/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item__info">
+                    <div class="item__content">
+                        <div class="item__content-top">
+                            <h2>Chairs for the kitchen</h2>
+                            <p>Please note that this is not a real project but a demo designed solely to showcase our
+                                skills
+                                and
+                                expertise in web
+                                development, design, and UX copywriting. The product is intended for demonstration
+                                purposes
+                                only
+                                and should not be
+                                construed as a fully functional or operational e-commerce website. Thank you for your
+                                understanding.</p>
+                            <div>
+                                <span class="item__price _prod-price">$20,000</span>
+                                <fieldset class="item__content-qty">
+                                    <label>QTY:</label>
+                                    <input class="item__content-field" type="number" name="quantity" value="1" min="1">
+                                    <button class="quantity-button minus" type="button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="1.5"
+                                            viewBox="0 0 7 1.5">
+                                            <g fill="#4d3d30" stroke="#4d3d30" transform="rotate(-90 .75 .75)">
+                                                <rect width="1.5" height="7" rx=".3" stroke="#4d3d30"></rect>
+                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <span class="quantity-text js-qty-text">1</span>
+                                    <button class="quantity-button plus" type="button">
+                                        <svg id="Plus" width="7" height="7" viewBox="0 0 7 7">
+                                            <g fill="#4d3d30" transform="translate(2.75)">
+                                                <rect width="1.5" height="7" stroke="none" rx=".3"></rect>
+                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
+                                            </g>
+                                            <g fill="#4d3d30" transform="translate(0 4.25) rotate(-90)">
+                                                <rect width="1.5" height="7" stroke="none" rx=".3"></rect>
+                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <a href="" class="_button _button-dark">
+                            <label class="_button-words">
+                                <span class="span1">ADD TO CART</span>
+                                <span class="span2">ADD TO CART</span>
+                            </label>
+                            <div>
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+                                    <path class="v1" d="M1 1L6 6L1 11" stroke-width="2" />
+                                    <path class="v2" d="M1 1L6 6L1 11" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <ol class="item__data">
+                        <li>DESCRIPTION</li>
+                        <li>SHIPPING</li>
+                        <li>RETURN</li>
+                    </ol>
+                </div>
+                <div class="item__data-content">
+                    <p>
+                        Thanks for your interest in our project! Please note this is a
+                        demo site only - you cannot buy anything here. It
+                        showcases our skills in web development, design, and UX copywriting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related">
+        <div class="related__container _container">
+            <div class="related__body">
+                <h2>Related products</h2>
+                <div class="related__flex">
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-1.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">bamboo chair</span>
+                            <label class="_prod-price">$950.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-2.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Chairs for the kitchen</span>
+                            <label class="_prod-price">$1200.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-3.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Sturdy steel armchair</span>
+                            <label class="_prod-price">$600.00</label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include('html/scripts.html')

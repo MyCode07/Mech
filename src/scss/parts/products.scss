@@ -1,5 +1,4 @@
 .products {
-    
     // .products__container
 
     &__container {
@@ -44,7 +43,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        background-color: #e8e0d4;
+        border: 1px solid #d1c7a3;
         cursor: pointer;
         @include adaptive-value("padding-top", 15, 10, 1);
         @include adaptive-value("padding-bottom", 15, 10, 1);
@@ -54,14 +53,14 @@
         max-width: 450px;
         width: 100%;
 
-        @media (any-hover: hover) {
-            &:hover {
-                .product__article-img {
-                    img {
-                        background-color: #fff;
-                    }
-                }
-            }
+        // .product__article-info
+
+        &-info {
+            pointer-events: none;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
         }
 
         // .product__article-img
@@ -74,10 +73,10 @@
             @include adaptive-value("margin-bottom", 15, 10, 1);
 
             img {
-                @include adaptive-value("height", 306, 160, 1);
+                @include adaptive-value("height", 426, 160, 1);
                 @include adaptive-value("width", 443, 200, 1);
                 object-fit: contain;
-                transition: all 0.3s ease 0s;
+                transition: all 0.6s ease 0s;
             }
 
             & > :nth-child(2) {
@@ -86,18 +85,28 @@
                 top: 0;
                 opacity: 0;
                 width: 100%;
+                object-fit: cover;
+                transform: scale(1.03);
             }
         }
+    }
+}
 
-        // .product__article-info
+.prod-hover {
+    @media (any-hover: hover) {
+        &:hover {
+            & > :first-child {
+                & > :nth-child(1) {
+                    position: absolute;
+                    opacity: 0;
+                    transform: scale(-0.3);
+                }
 
-        &-info {
-            pointer-events: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+                & > :nth-child(2) {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         }
     }
 }

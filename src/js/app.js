@@ -1,4 +1,4 @@
-// import './utils/smoothscrol.js';
+import './utils/smoothscrol.js';
 import './utils/menu.js';
 import './utils/header.js';
 import './utils/category-scroll.js';
@@ -13,6 +13,6 @@ import './utils/replace.js';
 // import './utils/popup.js';
 // import './utils/inputmask.js';
 // import './utils/forms.js';
-// import './utils/accordeon.js';
+import './utils/accordeon.js';
 // import './utils/sliders.js';
 // import './utils/lazyImages.js';
