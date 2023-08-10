@@ -88,6 +88,8 @@
             }
 
             .swiper-slide {
+                background-color: #f4f0ea;
+
                 @media (max-width: 992px) {
                     position: relative;
                     padding-bottom: 120%;
@@ -159,6 +161,7 @@
     // .item__info
 
     &__info {
+        position: relative;
         @include adaptive-value("padding-top", 50, 30, 1);
         @include adaptive-value("padding-bottom", 50, 30, 1);
 
@@ -263,13 +266,14 @@
         @include adaptive-value("margin-top", 50, 30, 1);
         position: relative;
         border: 1px solid #4d3d30;
-        overflow: hidden;
+        background-color: #f4f0ea;
 
-        & > :not(:last-child) {
+        .dropdown {
             border-right: 1px solid #4d3d30;
-        }
+            background-color: #f4f0ea;
+            position: relative;
+            z-index: 3;
 
-        li {
             @media (any-hover: hover) {
                 &:hover {
                     background-color: #4d3d30;
@@ -290,12 +294,83 @@
             @media (max-width: 768px) {
                 line-height: 15px;
             }
+
+            &._active {
+                background-color: #4d3d30;
+                color: #f4f0ea;
+                overflow: hidden;
+            }
+        }
+
+        & > :nth-child(3) {
+            border-right: unset;
         }
 
         // .item__data-content
 
         &-content {
-            display: none;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: fit-content;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #4d3d30;
+            z-index: 1;
+
+            ol {
+                &._open {
+                    display: block;
+                    padding: 50px 25px 50px 25px;
+                }
+                display: none;
+
+                & > :not(:last-child) {
+                    margin-bottom: 25px;
+                }
+
+                li {
+                    color: #f4f0ea;
+                    text-align: left;
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid #f4f0ea38;
+
+                    label {
+                        color: #d1c7a3;
+                        font-size: 14px;
+                        display: block;
+                        margin-bottom: 25px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                        position: relative;
+                        padding-left: 20px;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            left: 0px;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background-color: #e8e0d4;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        text-transform: initial;
+                        line-height: 130%;
+                    }
+                }
+            }
         }
     }
 }
@@ -304,6 +379,10 @@
     // .quantity-button
 
     &-button {
+        padding: 10px, 10px;
+        svg {
+            pointer-events: none;
+        }
     }
 
     // .quantity-text
@@ -313,6 +392,7 @@
         margin: 0 15px;
     }
 }
+
 .minus {
 }
 
@@ -376,7 +456,17 @@
         @media (any-hover: hover) {
             &:hover {
                 .related__article-img {
-                    background-color: #fff;
+                    & > :nth-child(1) {
+                        position: absolute;
+                        opacity: 0;
+                        transform: scale(-0.3);
+                    }
+
+                    & > :nth-child(2) {
+                        position: relative;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
                 }
             }
         }
@@ -385,13 +475,28 @@
 
         &-img {
             transition: all 0.3s ease 0s;
+            position: relative;
+            flex: 1 1 auto;
+
             img {
                 @include adaptive-value("height", 530, 225, 1);
                 object-fit: cover;
+                object-position: center;
+                transition: all 0.6s ease 0s;
 
                 @media (max-width: 768px) {
                     object-fit: contain;
                 }
+            }
+
+            & > :nth-child(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                width: 100%;
+                object-fit: cover;
+                transform: scale(1.03);
             }
         }
 

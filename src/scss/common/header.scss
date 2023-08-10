@@ -12,7 +12,7 @@
     background-color: transparent;
 
     @media (min-width: 769px) {
-        @include adaptive-value("padding-top", 60, 0, 1);
+        @include adaptive-value("padding-top", 100, 0, 1);
     }
 
     // .header__container
@@ -240,7 +240,9 @@
     }
 
     &._sticky {
-        background-color: #f4f0ea;
+        background: rgba(255, 255, 255, 0.05);
+        -webkit-backdrop-filter: blur(17px);
+        backdrop-filter: blur(17px);
         padding-top: 0;
         box-shadow: 0px 0px 1px 1px #4d3d3013;
 

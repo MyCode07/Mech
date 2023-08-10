@@ -1,6 +1,12 @@
 ._ticker {
     overflow: hidden;
     display: flex;
+    position: relative;
+    z-index: -1;
+
+    @media (max-width: 992px) {
+        top: -475px;
+    }
 
     @media (any-hover: hover) {
         &:hover {
@@ -15,5 +21,12 @@
     &-text {
         font-style: normal;
         white-space: nowrap;
+        color: #4d3d30;
+        @include adaptive-value("font-size", 128, 30, 1);
+
+        span {
+            color: transparent;
+            -webkit-text-stroke: 1px #4d3d30;
+        }
     }
 }

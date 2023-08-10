@@ -1,0 +1,264 @@
+.about {
+    padding-top: 100px;
+
+    // .about__container
+
+    &__container {
+    }
+
+    // .about__body
+
+    &__body {
+        h1 {
+            color: #4d3d30;
+            @include adaptive-value("font-size", 124, 47, 1);
+            margin-bottom: 35px;
+        }
+        svg {
+            width: 100vw;
+            @include adaptive-value("height", 1134, 228, 1);
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 768px) {
+                path {
+                    stroke-width: 15px;
+                }
+            }
+        }
+    }
+
+    // .about__content
+
+    &__content {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        @include adaptive-value("top", -260, -70, 1);
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        img {
+            width: 910px;
+            @include adaptive-value("height", 1110, 300, 1);
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+        }
+        // .about__content-info
+
+        &-info {
+            width: 100%;
+            position: relative;
+            @media (min-width: 769px) {
+                @include adaptive-value("left", -126, 0, 1);
+                @include adaptive-value("padding-bottom", 150, 0, 1);
+            }
+
+            h2 {
+                text-align: left;
+                @include adaptive-value("margin-bottom", 60, 30, 1);
+            }
+            p {
+                text-transform: uppercase;
+                max-width: 600px;
+                width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+    }
+}
+
+.timeless {
+    // .timeless__container
+
+    &__container {
+    }
+
+    // .timeless__body
+
+    &__body {
+    }
+
+    // .timeless__content
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 992px) {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+        }
+
+        // .timeless__content-info
+
+        &-info {
+            @include adaptive-value("padding-top", 185, 0, 1);
+            max-width: 630px;
+            width: 100%;
+
+            @media (max-width: 992px) {
+                padding-top: 80%;
+            }
+
+            @media (max-width: 768px) {
+                padding-top: 90%;
+            }
+
+            @media (max-width: 650px) {
+                padding-top: 95%;
+            }
+            @media (max-width: 550px) {
+                padding-top: 120%;
+            }
+            @media (max-width: 400px) {
+                padding-top: 145%;
+            }
+
+            h2 {
+                @include adaptive-value("margin-bottom", 60, 30, 1);
+            }
+            p {
+                @media (min-width: 768px) {
+                    max-width: 550px;
+                    width: 100%;
+                }
+            }
+        }
+
+        // .timeless__content-images
+
+        &-images {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            @include adaptive-value("top", 0, -70, 1);
+
+            @media (max-width: 992px) {
+                max-width: unset;
+            }
+
+            img {
+                position: absolute;
+                object-fit: cover;
+                right: 0;
+            }
+
+            & > :first-child {
+                @include adaptive-value("width", 700, 237, 1);
+                @include adaptive-value("height", 750, 306, 1);
+            }
+
+            & > :nth-child(2) {
+                @include adaptive-value("width", 386, 186, 1);
+                @include adaptive-value("height", 477, 230, 1);
+                @include adaptive-value("top", 440, 150, 1);
+                @include adaptive-value("right", 520, -50, 1);
+
+                @media (max-width: 992px) {
+                    @include adaptive-value("top", 484, 150, 1);
+                    right: 30%;
+                }
+            }
+
+            & > :last-child {
+                @include adaptive-value("width", 386, 176, 1);
+                @include adaptive-value("height", 390, 176, 1);
+                @include adaptive-value("top", 784, 200, 1);
+                @include adaptive-value("right", 700, 100, 1);
+                z-index: 2;
+
+                @media (max-width: 992px) {
+                    @include adaptive-value("top", 784, 300, 1);
+                    right: 50%;
+                }
+            }
+        }
+    }
+}
+
+.video {
+    @include adaptive-value("padding-top", 300, 0, 1);
+
+    // .video__container
+
+    &__container {
+    }
+
+    // .video__body
+
+    &__body {
+    }
+
+    // .video__title
+
+    &__title {
+        width: 100%;
+        @include adaptive-value("margin-bottom", 80, 30, 1);
+
+        & > :nth-child(2) {
+            justify-content: center;
+        }
+
+        & > :nth-child(3) {
+            justify-content: flex-end;
+        }
+
+        span {
+            display: flex;
+            color: #4d3d30;
+            @include adaptive-value("font-size", 300, 60, 1);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            div {
+                margin-top: 30px;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    // .video__content
+
+    &__content {
+        background-color: #000;
+        position: relative;
+
+        img {
+            opacity: 0.6;
+        }
+        // .video__content-text
+
+        &-text {
+            position: absolute;
+            top: 50%;
+            @include adaptive-value("left", 50, 15, 1);
+            transform: translate(0, -50%);
+            max-width: 640px;
+            width: 100%;
+            color: #f4f0ea;
+
+            @media (max-width: 768px) {
+                color: #4d3d30;
+                top: 0;
+                left: 0;
+                transform: translate(0);
+            }
+
+            h2 {
+                @include adaptive-value("margin-bottom", 100, 30, 1);
+            }
+        }
+    }
+}

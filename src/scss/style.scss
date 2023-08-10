@@ -31,6 +31,10 @@
 // load error 404
 @import "common/404";
 
+// load ticker
+@import "common/ticker";
+
+
 // load error hero
 @import "parts/hero";
 
@@ -54,4 +58,7 @@
 
 // load error item
 @import "parts/item";
+
+// load error about
+@import "parts/about";
 
