@@ -214,45 +214,18 @@
                 }
             }
         }
-
-        // .item__content-qty
-
-        &-qty {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 500px;
-            width: fit-content;
-
-            button {
-            }
-
-            input {
-                display: none;
-            }
-
-            span {
-            }
-
-            label {
-                color: #4d3d30;
-                @include adaptive-value("font-size", 16, 12, 1);
-                text-transform: uppercase;
-                display: block;
-                margin-right: 5px;
-            }
-        }
-
-        // .item__content-field
-
-        &-field {
-        }
     }
 
     // .item__price
 
     &__price {
+        color: #1b1816;
+        @include adaptive-value("font-size", 44, 16, 1);
+        font-family: Manrope;
+
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
     }
 
     // .item__data
@@ -260,9 +233,9 @@
     &__data {
         position: relative;
 
-        // .item__data-title
+        // .item__data-tabs
 
-        &-title {
+        &-tabs {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             border-radius: 200px;
@@ -271,7 +244,7 @@
             border: 1px solid #4d3d30;
             background-color: #f4f0ea;
 
-            .dropdown {
+            .tab {
                 border-right: 1px solid #4d3d30;
                 background-color: #f4f0ea;
                 position: relative;
@@ -298,7 +271,7 @@
                     line-height: 15px;
                 }
 
-                &._active {
+                &[data-open] {
                     background-color: #4d3d30;
                     color: #f4f0ea;
                     overflow: hidden;
@@ -324,14 +297,15 @@
             z-index: 1;
 
             ol {
-                &._open {
-                    display: block;
-                    padding: 50px 25px 50px 25px;
-                }
                 display: none;
+                padding: 50px 25px 50px 25px;
 
                 & > :not(:last-child) {
                     margin-bottom: 25px;
+                }
+
+                &[data-open] {
+                    display: block;
                 }
 
                 li {
@@ -380,12 +354,28 @@
 }
 
 .quantity {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 500px;
+    width: fit-content;
+
     // .quantity-button
 
     &-button {
-        padding: 20px 10px;
-        svg {
+        width: 25px;
+        height: 25px;
+        flex: 0 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg,
+        img {
             pointer-events: none;
+            width: 10px;
         }
     }
 
@@ -393,7 +383,27 @@
 
     &-text {
         display: block;
-        margin: 0 15px;
+        margin: 0 10px;
+        width: 1em;
+        text-align: center;
+    }
+
+    button {
+    }
+
+    input {
+        display: none;
+    }
+
+    span {
+    }
+
+    label {
+        color: #4d3d30;
+        @include adaptive-value("font-size", 16, 12, 1);
+        text-transform: uppercase;
+        display: block;
+        margin-right: 5px;
     }
 }
 

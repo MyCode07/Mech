@@ -103,10 +103,8 @@ p {
     text-transform: uppercase;
 }
 
-._prod-price {
-    color: #1b1816;
-    @include adaptive-value("font-size", 44, 16, 1);
-    font-family: Manrope;
+.price {
+   
 }
 
 ._button {

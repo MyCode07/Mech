@@ -6,7 +6,6 @@
 "class":"_sticky",
 })
 
-
 <main class="cart">
 
     <section class="item">
@@ -64,34 +63,24 @@
                                 construed as a fully functional or operational e-commerce website. Thank you for your
                                 understanding.</p>
                             <div>
-                                <span class="item__price _prod-price">20000</span>
-                                <fieldset class="item__content-qty">
+                                <span class="item__price">
+                                    <span>$</span>
+                                    <span class="price">20000</span>
+                                </span>
+
+                                <div class="quantity">
                                     <label>QTY:</label>
-                                    <input class="item__content-field" type="number" name="quantity" value="1" min="1"
-                                        max="10" step="1">
-                                    <button class="quantity-button minus" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="1.5"
-                                            viewBox="0 0 7 1.5">
-                                            <g fill="#4d3d30" stroke="#4d3d30" transform="rotate(-90 .75 .75)">
-                                                <rect width="1.5" height="7" rx=".3" stroke="#4d3d30"></rect>
-                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
-                                            </g>
-                                        </svg>
+                                    <input class="quantity-input" type="number" name="qty" value="1" min="1" max="10"
+                                        step="1">
+                                    <button class="quantity-button minus">
+                                        <img src="img/icons/minus.svg" alt="">
                                     </button>
                                     <span class="quantity-text">1</span>
-                                    <button class="quantity-button plus" type="button">
-                                        <svg id="Plus" width="7" height="7" viewBox="0 0 7 7">
-                                            <g fill="#4d3d30" transform="translate(2.75)">
-                                                <rect width="1.5" height="7" stroke="none" rx=".3"></rect>
-                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
-                                            </g>
-                                            <g fill="#4d3d30" transform="translate(0 4.25) rotate(-90)">
-                                                <rect width="1.5" height="7" stroke="none" rx=".3"></rect>
-                                                <rect width=".5" height="6" x=".5" y=".5" fill="none" rx=".2"></rect>
-                                            </g>
-                                        </svg>
+                                    <button class="quantity-button plus">
+
+                                        <img src="img/icons/plus.svg" alt="">
                                     </button>
-                                </fieldset>
+                                </div>
                             </div>
                         </div>
                         <a href="" class="_button _button-dark">
@@ -108,12 +97,12 @@
                         </a>
                     </div>
                     <ol class="item__data">
-                        <div class="item__data-title">
-                            <li class="dropdown" id="description">DESCRIPTION</li>
-                            <li class="dropdown" id="shipping">SHIPPING</li>
-                            <li class="dropdown" id="return">RETURN</li>
+                        <div class="item__data-tabs _parent">
+                            <button class="tab" id="description">DESCRIPTION</button>
+                            <button class="tab" id="shipping">SHIPPING</button>
+                            <button class="tab" id="return">RETURN</button>
                         </div>
-                        <div class="item__data-content">
+                        <div class="item__data-content _parent">
                             <ol data-id="description">
                                 <li>
                                     <p>
@@ -124,7 +113,6 @@
                                         hosting experience, infusing elegance and refinement into each gathering.
                                     </p>
                                 </li>
-
                                 <li>
                                     <p>
                                         Introducing the Chair, a fusion of style and practicality that elevates your
@@ -138,7 +126,6 @@
                                         (P.U.) coating, offering both protection and a refined finish.
                                     </p>
                                 </li>
-
                                 <li>
                                     <label>**SPECIFICATIONS:</label>
 
@@ -161,7 +148,6 @@
                                         Fabric Origin: Canada
                                     </span>
                                 </li>
-
                             </ol>
                             <ol data-id="shipping">
                                 <li>
@@ -253,6 +239,8 @@
             </div>
         </div>
     </section>
+
 </main>
+
 @@include('./html/footer.html')
 @@include('html/scripts.html')

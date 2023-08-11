@@ -14,12 +14,12 @@
                 <div class="catalog__top">
                     <h1>All categories</h1>
                     <div class="catalog__top-info">
-                        <div class="catalog__qty sort">
+                        <div class="catalog__qty _border">
                             <label>6</label>
                             <span>Products</span>
                         </div>
-                        <div class="catalog__search sort">
-                            <form action="/search" method="get" role="search">
+                        <div class="catalog__search _border">
+                            <form action="#" method="get" role="search">
                                 <input type="text" placeholder="Search" value="">
                                 <button class="submit" type="submit">
                                     <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
@@ -35,18 +35,13 @@
                 </div>
                 <div class="catalog__bottom">
                     <div class="catalog__filters">
-                        <div class="catalog__filters-sort sort">
-                            <span>Category
-                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
-                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
-                                </svg>
+                        <div class="catalog__filters-item _border">
+                            <button>
+                                <span>Category</span>
+                                <span class="defis">—</span>
                                 <label>All categories</label>
-                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
-                                </svg>
-
-                            </span>
+                                <img src="img/icons/arrow.svg" alt="">
+                            </button>
                             <ul>
                                 <li class="_selected">All categories</li>
                                 <li>Home office chairs</li>
@@ -55,36 +50,28 @@
                                 <li>Chairs for the kitchen</li>
                             </ul>
                         </div>
-                        <div class="catalog__filters-sort sort">
-                            <span>Price
-                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
-                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
-                                </svg>
-                                <label>$550.00 - $750.00</label>
-                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
-                                </svg>
+                        <div class="catalog__filters-item _border">
+                            <button>
+                                <span>Pricey</span>
+                                <span class="defis">—</span>
 
-                            </span>
+                                <label>$550.00 - $750.00</label>
+                                <img src="img/icons/arrow.svg" alt="">
+                            </button>
                             <ul>
                                 <li class="_selected">$550.00 - $750.00</li>
                                 <li>$800.00 - $950.00</li>
                                 <li>$1000.00 - $1200.00</li>
                             </ul>
                         </div>
-                        <div class="catalog__filters-sort sort">
-                            <span>Sort by
-                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
-                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
-                                </svg>
-                                <label>lowest</label>
-                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
-                                </svg>
+                        <div class="catalog__filters-item _border">
+                            <button>
+                                <span>Sort by</span>
+                                <span class="defis">—</span>
 
-                            </span>
+                                <label>lowest</label>
+                                <img src="img/icons/arrow.svg" alt="">
+                            </button>
                             <ul>
                                 <li class="_selected">Newest first</li>
                                 <li>Lowest Price first</li>
@@ -204,6 +191,7 @@
             </div>
         </div>
     </section>
+
 </main>
 @@include('./html/footer.html')
 @@include('html/scripts.html')

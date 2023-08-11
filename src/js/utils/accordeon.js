@@ -1,4 +1,4 @@
-const accordions = document.querySelectorAll('[data-z]');
+const accordions = document.querySelectorAll('[data-accordion]');
 if (accordions.length) {
 
     accordions.forEach(accordion => {
@@ -22,13 +22,9 @@ function toggleAccordion(item) {
     const accordeonItems = accordeon.querySelectorAll('[data-accordion-item]');
 
     if (!item.hasAttribute('data-open')) {
-        const openitem = accordeon.querySelector('[data-accordion-item][data-open]');
-        if (openitem) {
-            openitem.removeAttribute('data-open')
-        }
 
         accordeonItems.forEach(item => {
-            item.removeAttribute('data-open')
+            if (item.hasAttribute('data-open')) item.removeAttribute('data-open')
         })
 
         item.setAttribute('data-open', 'open')
