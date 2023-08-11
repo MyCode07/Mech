@@ -1,0 +1,209 @@
+@@include('./html/head.html', {
+"title":"catalog",
+})
+
+@@include('./html/header.html', {
+"class":"_sticky",
+})
+
+
+<main class="catalog">
+    <section class="catalog">
+        <div class="catalog__container _container">
+            <div class="catalog__body">
+                <div class="catalog__top">
+                    <h1>All categories</h1>
+                    <div class="catalog__top-info">
+                        <div class="catalog__qty sort">
+                            <label>6</label>
+                            <span>Products</span>
+                        </div>
+                        <div class="catalog__search sort">
+                            <form action="/search" method="get" role="search">
+                                <input type="text" placeholder="Search" value="">
+                                <button class="submit" type="submit">
+                                    <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M16.5 16.5L13.5834 13.5833M15.6667 8.5833C15.6667 12.4954 12.4954 15.6667 8.5833 15.6667C4.67132 15.6667 1.5 12.4954 1.5 8.5833C1.5 4.67132 4.67132 1.5 8.5833 1.5C12.4954 1.5 15.6667 4.67132 15.6667 8.5833Z"
+                                            stroke="#F4F0EA" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__bottom">
+                    <div class="catalog__filters">
+                        <div class="catalog__filters-sort sort">
+                            <span>Category
+                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
+                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
+                                </svg>
+                                <label>All categories</label>
+                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
+                                </svg>
+
+                            </span>
+                            <ul>
+                                <li class="_selected">All categories</li>
+                                <li>Home office chairs</li>
+                                <li>Basics for the living room</li>
+                                <li>Bedroom chairs</li>
+                                <li>Chairs for the kitchen</li>
+                            </ul>
+                        </div>
+                        <div class="catalog__filters-sort sort">
+                            <span>Price
+                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
+                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
+                                </svg>
+                                <label>$550.00 - $750.00</label>
+                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
+                                </svg>
+
+                            </span>
+                            <ul>
+                                <li class="_selected">$550.00 - $750.00</li>
+                                <li>$800.00 - $950.00</li>
+                                <li>$1000.00 - $1200.00</li>
+                            </ul>
+                        </div>
+                        <div class="catalog__filters-sort sort">
+                            <span>Sort by
+                                <svg class="line" width="10" height="3" viewBox="0 0 10 3" fill="none">
+                                    <path d="M0 1.5H10" stroke="#4D3D30" stroke-width="1.25" />
+                                </svg>
+                                <label>lowest</label>
+                                <svg class="arrow" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="#4D3D30" stroke-width="2" />
+                                </svg>
+
+                            </span>
+                            <ul>
+                                <li class="_selected">Newest first</li>
+                                <li>Lowest Price first</li>
+                                <li>Highest Price first</li>
+                                <li>A-Z</li>
+                                <li>Z-A</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related">
+        <div class="related__container _container">
+            <div class="related__body">
+                <div class="related__flex">
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-1.png" alt="">
+                            <img src="img/w2.jpg" alt="">
+
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">bamboo chair</span>
+                            <label class="_prod-price">$950.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-2.png" alt="">
+                            <img src="img/prod-7-hover1.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Chairs for the kitchen</span>
+                            <label class="_prod-price">$1200.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-3.png" alt="">
+                            <img src="img/silla-2.jpg" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Sturdy steel armchair</span>
+                            <label class="_prod-price">$600.00</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="related__flex">
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-1.png" alt="">
+                            <img src="img/w2.jpg" alt="">
+
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">bamboo chair</span>
+                            <label class="_prod-price">$950.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-2.png" alt="">
+                            <img src="img/prod-7-hover1.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Chairs for the kitchen</span>
+                            <label class="_prod-price">$1200.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-3.png" alt="">
+                            <img src="img/silla-2.jpg" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Sturdy steel armchair</span>
+                            <label class="_prod-price">$600.00</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="related__flex">
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-1.png" alt="">
+                            <img src="img/w2.jpg" alt="">
+
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">bamboo chair</span>
+                            <label class="_prod-price">$950.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-2.png" alt="">
+                            <img src="img/prod-7-hover1.png" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Chairs for the kitchen</span>
+                            <label class="_prod-price">$1200.00</label>
+                        </div>
+                    </a>
+                    <a href="" class="related__article">
+                        <div class="related__article-img">
+                            <img src="img/related-3.png" alt="">
+                            <img src="img/silla-2.jpg" alt="">
+                        </div>
+                        <div class="related__article-info">
+                            <span class="_prod-name">Sturdy steel armchair</span>
+                            <label class="_prod-price">$600.00</label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./html/footer.html')
+@@include('html/scripts.html')

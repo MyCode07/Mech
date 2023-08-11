@@ -54,58 +54,6 @@ if (projectImages) {
     }
 }
 
-const dropDowns = document.querySelectorAll('.dropdown');
-
-for (let i = 0; i < dropDowns.length; i++) {
-    const dropDown = dropDowns[i];
-    let targetDataIds = document.querySelectorAll('.item__data-content ol');
-
-    dropDown.addEventListener('click', (e) => {
-
-        for (let k = 0; k < targetDataIds.length; k++) {
-            const targetDataId = targetDataIds[k];
-
-            let dropDownContent = targetDataId.dataset.id;
-
-            if (dropDown.id == dropDownContent && !targetDataId.hasAttribute('_open')) {
-                targetDataId.classList.add('_open')
-                dropDown.classList.add('_active')
-            } else {
-                targetDataId.classList.remove('_open')
-            }
-
-        }
-
-    })
-}
-
-
-
-const quantityElement = document.querySelector(".quantity-text");
-const priceElement = document.querySelector('.item__price');
-const minusButton = document.querySelector('.minus');
-const plusButton = document.querySelector('.plus');
-
-let price = 20000
-if (plusButton) {
-    minusButton.addEventListener("click", () => {
-        if (quantityElement.textContent > 1) {
-            quantityElement.textContent--
-            const totalPrice = priceElement.textContent - price;
-            priceElement.textContent = totalPrice;
-        }
-    });
-
-
-    plusButton.addEventListener("click", () => {
-        quantityElement.textContent++
-
-        const totalPrice = quantityElement.textContent * price;
-        priceElement.textContent = totalPrice;
-    });
-}
-
-
 
 
 

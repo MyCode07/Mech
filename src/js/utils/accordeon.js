@@ -1,4 +1,4 @@
-const accordions = document.querySelectorAll('[data-accordion]');
+const accordions = document.querySelectorAll('[data-z]');
 if (accordions.length) {
 
     accordions.forEach(accordion => {

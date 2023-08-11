@@ -226,8 +226,6 @@
             width: fit-content;
 
             button {
-                @include adaptive-value("padding-left", 20, 5, 1);
-                @include adaptive-value("padding-right", 20, 5, 1);
             }
 
             input {
@@ -260,50 +258,56 @@
     // .item__data
 
     &__data {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        border-radius: 200px;
-        @include adaptive-value("margin-top", 50, 30, 1);
         position: relative;
-        border: 1px solid #4d3d30;
-        background-color: #f4f0ea;
 
-        .dropdown {
-            border-right: 1px solid #4d3d30;
+        // .item__data-title
+
+        &-title {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-radius: 200px;
+            overflow: hidden;
+            @include adaptive-value("margin-top", 50, 30, 1);
+            border: 1px solid #4d3d30;
             background-color: #f4f0ea;
-            position: relative;
-            z-index: 3;
 
-            @media (any-hover: hover) {
-                &:hover {
+            .dropdown {
+                border-right: 1px solid #4d3d30;
+                background-color: #f4f0ea;
+                position: relative;
+                z-index: 3;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        background-color: #4d3d30;
+                        color: #f4f0ea;
+                    }
+                }
+
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                text-align: center;
+                @include adaptive-value("padding-top", 10, 5, 1);
+                @include adaptive-value("padding-bottom", 10, 5, 1);
+
+                color: #4d3d30;
+                @include adaptive-value("font-size", 16, 12, 1);
+                text-transform: uppercase;
+
+                @media (max-width: 768px) {
+                    line-height: 15px;
+                }
+
+                &._active {
                     background-color: #4d3d30;
                     color: #f4f0ea;
+                    overflow: hidden;
                 }
             }
 
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-            text-align: center;
-            @include adaptive-value("padding-top", 10, 5, 1);
-            @include adaptive-value("padding-bottom", 10, 5, 1);
-
-            color: #4d3d30;
-            @include adaptive-value("font-size", 16, 12, 1);
-            text-transform: uppercase;
-
-            @media (max-width: 768px) {
-                line-height: 15px;
+            & > :nth-child(3) {
+                border-right: unset;
             }
-
-            &._active {
-                background-color: #4d3d30;
-                color: #f4f0ea;
-                overflow: hidden;
-            }
-        }
-
-        & > :nth-child(3) {
-            border-right: unset;
         }
 
         // .item__data-content
@@ -379,7 +383,7 @@
     // .quantity-button
 
     &-button {
-        padding: 10px, 10px;
+        padding: 20px 10px;
         svg {
             pointer-events: none;
         }

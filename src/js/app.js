@@ -6,6 +6,8 @@ import './utils/fullscreen.js';
 import './utils/replace.js';
 import './utils/sliders.js';
 import './utils/ticker.js';
+import './utils/filters.js';
+import './utils/prod-description.js';
 
 // import './utils/animations.js';
 
