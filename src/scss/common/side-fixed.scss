@@ -20,7 +20,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 15;
+    z-index: 99;
 
     background-color: rgba($color: #000000, $alpha: 0.8);
 
@@ -29,7 +29,7 @@
     pointer-events: none;
     visibility: hidden;
 
-    &._active {
+    &._open {
         opacity: 1;
         visibility: visible;
         pointer-events: all;
@@ -45,7 +45,6 @@
         background-color: #fff;
         overflow-y: auto;
         height: 100%;
-        width: 340px;
         transition: all 0.3s ease 0s;
     }
 

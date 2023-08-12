@@ -20,6 +20,7 @@ body {
     }
 
     &::-webkit-scrollbar-thumb {
+        background: #4d3d30;
     }
 }
 
@@ -100,6 +101,7 @@ p {
 ._prod-name {
     @include adaptive-value("font-size", 18, 12, 1);
     text-transform: uppercase;
+    color: inherit;
 }
 
 .price {
