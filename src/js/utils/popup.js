@@ -1,8 +1,10 @@
 import { isMobile } from "./isMobile.js";
 
 const popup = document.querySelector('.popup');
+const notice = document.querySelector('.notice');
 const popupClose = document.querySelector('.popup__close');
-const popupOpenButtons = document.querySelectorAll('.popup-open');
+const popupOpenButtons = document.querySelectorAll('.header__cart');
+const noticeClose = document.querySelector('.notice__close');
 
 
 if (popupOpenButtons.length) {
@@ -33,6 +35,13 @@ if (popupOpenButtons.length) {
                 unLockPadding()
             }
         })
+    })
+}
+
+if (noticeClose) {
+    noticeClose.addEventListener('click', function (e) {
+        console.log(e.target.classList.contains('notice'));
+        notice.classList.remove('_open')
     })
 }
 

@@ -1,0 +1,109 @@
+{
+    "products": [
+        {
+            "image": "img/product-1.png",
+            "name": "bamboo",
+            "price": 950.00,
+            "article": "T1",
+            "available": true
+        },
+        {
+            "image": "img/product-2.png",
+            "name": "Ecowood",
+            "price": 1200.00,
+            "article": "T2",
+            "available": true
+        },
+        {
+            "image": "img/product-3.png",
+            "name": "armchair",
+            "price": 600.00,
+            "article": "T3",
+            "available": true
+        },
+        {
+            "image": "img/product-1.png",
+            "name": "bamboo",
+            "price": 950.00,
+            "article": "T4",
+            "available": true
+        },
+        {
+            "image": "img/prod-5-hover2.png",
+            "name": "bamboo",
+            "price": 750.00,
+            "article": "T5",
+            "available": true
+        },
+        {
+            "image": "img/w2.jpg",
+            "name": "armchair",
+            "price": 550.00,
+            "article": "T6",
+            "available": true
+        },
+        {
+            "image": "img/prod-7-hover1.png",
+            "name": "bamboo",
+            "price": 950.00,
+            "article": "T7",
+            "available": true
+        },
+        {
+            "image": "img/prod-2-hover1.png",
+            "name": "armchair",
+            "price": 1100.00,
+            "article": "T8",
+            "available": true
+        },
+        {
+            "image": "img/prod-2-hover1.png",
+            "name": "armchair",
+            "price": 800.00,
+            "article": "T9",
+            "available": true
+        },
+        {
+            "image": "img/qq-hover.webp",
+            "name": "Ecowood",
+            "price": 850.00,
+            "article": "T10",
+            "available": true
+        },
+        {
+            "image": "img/q1.webp",
+            "name": "Ecowood",
+            "price": 900.00,
+            "article": "T11",
+            "available": true
+        },
+        {
+            "image": "img/r1.webp",
+            "name": "armchair",
+            "price": 1100.00,
+            "article": "T12",
+            "available": true
+        },
+        {
+            "image": "img/related-1.png",
+            "name": "bamboo chair",
+            "price": 950.00,
+            "article": "T13",
+            "available": true
+        },
+        {
+            "image": "img/prod-7-hover1.png",
+            "name": "Chairs for the kitchen",
+            "price": 1200.00,
+            "article": "T14",
+            "available": true
+        },
+        {
+            "image": "img/silla-2.jpg",
+            "name": "Sturdy steel armchair",
+            "price": 1200.00,
+            "article": "T15",
+            "available": true
+        }
+    ]
+}

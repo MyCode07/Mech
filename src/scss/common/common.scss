@@ -81,7 +81,6 @@ label + h1 {
 h2 {
     font-weight: 500;
     @include adaptive-value("font-size", 64, 25, 1);
-
 }
 
 h3 {
@@ -104,7 +103,6 @@ p {
 }
 
 .price {
-   
 }
 
 ._button {
@@ -153,8 +151,11 @@ p {
         svg {
             position: relative;
             left: 1px;
-            top: 1px;
             stroke: #4d3d30;
+
+            @media (max-width: 425px) {
+                width: 6px;
+            }
         }
     }
 
