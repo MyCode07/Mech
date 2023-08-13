@@ -48,7 +48,6 @@ if (popupAll.length)
 
 const fixedElems = document.querySelectorAll('._fixed');
 export const lockPadding = () => {
-    console.log('lock');
     const paddingRight = 12; // scrollbarwidth
 
     if (fixedElems.length) {
@@ -60,7 +59,6 @@ export const lockPadding = () => {
 }
 
 export const unLockPadding = () => {
-    console.log('unlock');
     const paddingRight = 12; // scrollbarwidth
 
     if (fixedElems.length) {
@@ -70,3 +68,14 @@ export const unLockPadding = () => {
     }
     document.body.style.paddingRight = 0 + 'px';
 }
+
+
+const openCheckoutBtn = document.querySelector('.open-checkout');
+const checkoutProductsHidden = document.querySelector('.checkout__product');
+
+if (openCheckoutBtn && checkoutProductsHidden)
+    openCheckoutBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openCheckoutBtn.classList.toggle('_active');
+        checkoutProductsHidden.classList.toggle('_open');
+    })

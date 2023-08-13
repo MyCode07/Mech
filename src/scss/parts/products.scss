@@ -81,6 +81,14 @@
         position: relative;
         @include adaptive-value("margin-bottom", 15, 10, 1);
 
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    background-color: #d1c7a3;
+                }
+            }
+        }
+
         img {
             @include adaptive-value("height", 426, 160, 1);
             @include adaptive-value("width", 443, 200, 1);

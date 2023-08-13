@@ -31,45 +31,47 @@
 // load error 404
 @import "common/404";
 
+// load to top
+@import "common/to-top";
+
 // load ticker
 @import "common/ticker";
 
-// load   hero
+// load animations
+@import "common/animations";
+
+// load hero
 @import "parts/hero";
 
-// load   section
+// load section
 @import "parts/section";
 
-// load   category
+// load category
 @import "parts/category";
 
-// load   fullscreen
+// load fullscreen
 @import "parts/fullscreen";
 
-// load   products
+// load products
 @import "parts/products";
 
-// load   minimalist
+// load minimalist
 @import "parts/minimalist";
 
-// load   eco
+// load eco
 @import "parts/eco";
 
-// load   item
+// load item
 @import "parts/item";
 
-// load   about
+// load about
 @import "parts/about";
 
-// load   catalog
+// load catalog
 @import "parts/catalog";
 
-// load   common/popup
-@import "common/popup";
+// load checkout
+@import "parts/checkout";
 
-// load   common/checkout
-@import "common/checkout";
-
-
-// load   catalog
+// load mini cart
 @import "parts/mini-cart";

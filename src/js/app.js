@@ -11,13 +11,12 @@ import './utils/single-product.js';
 import './utils/popup.js';
 import './utils/side-fixed.js';
 
-// import './utils/animations.js';
+import './utils/image-animaton.js';
 
+// import './utils/animations.js';
 // import './utils/mouse.js';
 // import './utils/to-top.js';
 // import './utils/inputmask.js';
 // import './utils/forms.js';
 // import './utils/accordeon.js';
 // import './utils/lazyImages.js';
-
-

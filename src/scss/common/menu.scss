@@ -106,6 +106,7 @@
                     @include adaptive-value("margin-right", 100, 20, 1);
                 }
                 li {
+                    
                     a {
                         color: #4d3d30;
                         @include adaptive-value("font-size", 96, 30, 1);

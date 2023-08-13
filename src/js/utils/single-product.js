@@ -67,6 +67,10 @@ document.addEventListener('click', function (e) {
 
         addtoCart(targetEl)
     }
+
+    if (targetEl.classList.contains('open-mini-cart')) {
+        addtoCart(targetEl)
+    }
 })
 
 
@@ -81,7 +85,12 @@ function addtoCart(targetEl) {
     // CookieManager.set('productImage', productImage);
     // CookieManager.set('productPrice', productPrice);
     // CookieManager.set('productCount', productCount);
-
+    // console.log(
+    //     CookieManager.get('productName'),
+    //     CookieManager.get('productImage'),
+    //     CookieManager.get('productPrice'),
+    //     CookieManager.get('productCount')
+    // );
 
     const miniCart = document.querySelector('.mini-cart');
     miniCart.classList.add('_open');
@@ -90,11 +99,4 @@ function addtoCart(targetEl) {
     if (!isMobile.any()) {
         lockPadding()
     }
-
-    console.log(
-        CookieManager.get('productName'),
-        CookieManager.get('productImage'),
-        CookieManager.get('productPrice'),
-        CookieManager.get('productCount')
-    );
 }

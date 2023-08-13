@@ -123,21 +123,41 @@ p {
     @include adaptive-value("padding-right", 9, 4, 1);
     padding-left: 20px;
 
+    @media (any-hover: hover) {
+        &:hover {
+            .span1 {
+                transform: translate3d(0, -200%, 0);
+            }
+
+            .span2 {
+                transform: translate3d(0, -100%, 0);
+            }
+
+            .v1 {
+                transform: translate3d(300%, 0, 0);
+            }
+
+            .v2 {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
     // ._button-words{
 
     &-words {
         overflow: hidden;
         @include adaptive-value("height", 20.3, 15, 1);
         pointer-events: none;
-
-        .span2 {
-            transform: translate(0, 300%);
-        }
     }
 
     span {
         transition: all 0.5s ease 0s;
         display: block;
+    }
+
+    .span2 {
+        transform: translate3d(0, 200%, 0);
     }
 
     div {
@@ -157,6 +177,17 @@ p {
 
             @media (max-width: 425px) {
                 width: 6px;
+            }
+
+            path {
+                transition: all 0.3s ease 0s;
+            }
+
+            .v1 {
+            }
+
+            .v2 {
+                transform: translate3d(-300%, 0, 0);
             }
         }
     }
