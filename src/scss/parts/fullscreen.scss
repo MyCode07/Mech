@@ -247,22 +247,23 @@
             background-color: #f4f0ea;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             width: fit-content;
             height: fit-content;
-            padding-top: 25px;
-            padding: 25px 25px 100px 25px;
+            @include adaptive-value("padding-bottom", 100, 30, 1);
+            padding-top: 0;
             padding-inline: unset;
 
             .yan__logo {
                 width: 100%;
-                padding: 25px;
+                @include adaptive-value("padding", 25, 15, 1);
+
                 background-color: #4d3d30;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-inline: auto;
-                margin-bottom: 70px;
+                @include adaptive-value("margin-bottom", 70, 30, 1);
 
                 svg {
                     fill: #f4f0ea;
@@ -272,12 +273,18 @@
             }
 
             p {
-                padding: 0 65px;
+                @include adaptive-value("padding-left", 65, 15, 1);
+                @include adaptive-value("padding-right", 65, 15, 1);
+
                 color: #4d3d30;
                 text-align: center;
                 max-width: 600px;
                 width: 100%;
                 @include adaptive-value("margin-bottom", 60, 30, 1);
+
+                @media (max-width: 768px) {
+                    max-width: none;
+                }
             }
 
             a {

@@ -1,3 +1,4 @@
+import './utils/preloader.js';
 import './utils/smoothscrol.js';
 import './utils/menu.js';
 import './utils/header.js';
