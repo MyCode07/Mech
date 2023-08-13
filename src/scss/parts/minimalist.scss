@@ -20,6 +20,7 @@
     // .minimalist__bigimg
 
     &__bigimg {
+        overflow: hidden;
         width: 45%;
     }
 
@@ -73,6 +74,8 @@
     // .minimalist__images
 
     &__images {
+        overflow: hidden;
+
         @media (max-width: 768px) {
             display: flex;
             align-items: flex-end;

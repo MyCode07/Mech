@@ -21,3 +21,26 @@
 [data-opacity-only] {
     opacity: 0;
 }
+
+[data-hidden] {
+    position: relative;
+    overflow: hidden;
+
+    &._remove {
+        &:before {
+            top: 100%;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #f4f0ea;
+        z-index: 1;
+        transition: all 0.5s ease-in 0s;
+    }
+}
