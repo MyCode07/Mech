@@ -1,13 +1,23 @@
+import { gsap, Power4 } from "gsap";
+
 document.addEventListener('DOMContentLoaded', () => {
-    const percents = document.querySelector('.preloader-count');
-    let count = 0;
+    const preloader = document.querySelector('.preloader');
 
-    setInterval(() => {
-        percents.textContent = count
-        if (count < 100) {
-            count++;
+    if (!preloader) return
+    const icon = document.querySelector('.preloader-icon__before');
 
-            
+    const timeline = gsap.timeline();
+
+    timeline.to(icon, {
+        width: 0,
+        duration: 2,
+        delay: 1,
+        ease: Power4.easeInOut
+    }).to(preloader, {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+            preloader.remove();
         }
-    }, 50);
+    })
 })

@@ -32,11 +32,22 @@
         }
     }
 
-    // .preloader-count
+    &-icon {
+        position: relative;
 
-    &-count {
-        @include adaptive-value("font-size", 120, 40, 1);
-        margin-right: -7px;
+        // .preloader-icon__before
+
+        &__before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background-color: #f4f0ea;
+            opacity: 0.8;
+
+        }
     }
 
     svg {
