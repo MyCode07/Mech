@@ -19,10 +19,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
 
-        @include adaptive-value("padding-top", 240, 120, 1);
-        @include adaptive-value("padding-bottom", 240, 120, 1);
+        @include adaptive-value("padding-top", 240, 80, 1);
+        @include adaptive-value("padding-bottom", 240, 80, 1);
+
+        padding-left: 50px;
+        padding-right: 50px;
+
+        @media (max-width: 1200px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
         & > :first-child {
             @include adaptive-value("margin-bottom", 70, 30, 1);
