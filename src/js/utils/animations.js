@@ -46,19 +46,23 @@ function animate(elem) {
 
 
 const tl = gsap.timeline();
+const homeHeroSection = document.querySelector('.hero');
 
 export function heroAnimation() {
+    gsap.to('.header', { opacity: 1, delay: 0.5, duration: 1, y: 0 });
+    gsap.to('.main', { opacity: 1, delay: 0, duration: 1, });
+
+    if (!homeHeroSection) return
+
+    const lines = homeHeroSection.querySelectorAll('.hero .line span');
+
     gsap.to('.hero__bgi', { scale: 1, delay: 0, duration: 0.8, });
-    tl.from(".line h1", 2, {
-        y: 500,
+    tl.from(lines, {
+        transform: "skewY(10deg) translateY(100%)",
         ease: "power4.out",
         delay: 1,
-        skewY: 50,
+        duration: 2,
     })
     gsap.to('.hero__top', { opacity: 1, delay: 1, duration: 2, });
     gsap.to('.hero__bottom', { opacity: 1, delay: 1, duration: 2, y: 0 });
-    gsap.to('.header', { opacity: 1, delay: 0.5, duration: 1, y: 0 });
-    gsap.to('.main', { opacity: 1, delay: 0, duration: 1, });
 }
-
-

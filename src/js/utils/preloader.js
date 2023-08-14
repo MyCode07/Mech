@@ -3,6 +3,7 @@ import { heroAnimation } from './animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.querySelector('.preloader');
+    document.body.classList.add('_noscroll')
 
     if (!preloader) return
     const icon = document.querySelector('.preloader-icon__before');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1.5,
         scale: 8,
         onComplete: () => {
+            document.body.classList.remove('_noscroll')
             preloader.remove();
             heroAnimation();
         }

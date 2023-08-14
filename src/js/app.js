@@ -11,8 +11,8 @@ import './utils/filters.js';
 import './utils/single-product.js';
 import './utils/popup.js';
 import './utils/side-fixed.js';
-
 import './utils/image-animaton.js';
+import './utils/notice.js';
 
 // import './utils/animations.js';
 // import './utils/mouse.js';

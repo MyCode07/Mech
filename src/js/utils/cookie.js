@@ -21,7 +21,7 @@ export const CookieManager = {
         let date = new Date();
         let cookie = [];
 
-        if (!days) days = 180;
+        if (!days) days = 1;
         date.setTime(date.getTime() + (days * 86400000));
 
         cookie.push(name + '=' + value);

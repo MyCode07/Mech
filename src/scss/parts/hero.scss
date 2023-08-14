@@ -54,20 +54,17 @@
         border-bottom: 1px solid rgba(244, 240, 234, 0.25);
         opacity: 0;
 
-        & > :first-child {
-            height: 30px !important;
+        span {
+            display: block;
+            transform-origin: left bottom;
         }
 
         .label {
+            margin-bottom: 30px;
             color: #f4f0ea;
             font-weight: 400;
-            @include adaptive-value("font-size", 24, 18, 1);
             text-transform: capitalize;
-            br {
-                @media (min-width: 769px) {
-                    display: none;
-                }
-            }
+            @include adaptive-value("font-size", 24, 18, 1);
         }
     }
 
