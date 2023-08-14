@@ -11,6 +11,9 @@
 
     background-color: transparent;
 
+    opacity: 0;
+    transform: translateY(-40px);
+
     @media (min-width: 769px) {
         @include adaptive-value("padding-top", 100, 0, 1);
     }

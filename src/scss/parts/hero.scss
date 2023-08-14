@@ -3,6 +3,9 @@
     @include adaptive-value("margin-bottom", 250, 100, 1);
     background-color: #4d3d30;
 
+    .fullscreen__img {
+        z-index: 0 !important;
+    }
     // .hero__bgi
 
     &__bgi {
@@ -12,6 +15,7 @@
         height: 100%;
         left: 0;
         top: 0;
+        transform: scale(2);
     }
 
     // .hero__container
@@ -48,12 +52,17 @@
         padding-bottom: 50px;
         margin-bottom: 64px;
         border-bottom: 1px solid rgba(244, 240, 234, 0.25);
+        opacity: 0;
 
-        label {
+        & > :first-child {
+            height: 30px !important;
+        }
+
+        .label {
             color: #f4f0ea;
             font-weight: 400;
             @include adaptive-value("font-size", 24, 18, 1);
-
+            text-transform: capitalize;
             br {
                 @media (min-width: 769px) {
                     display: none;
@@ -68,6 +77,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        opacity: 0;
+        transform: translateY(40px);
 
         @media (max-width: 768px) {
             display: block;

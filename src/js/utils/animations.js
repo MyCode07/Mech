@@ -45,3 +45,20 @@ function animate(elem) {
 }
 
 
+const tl = gsap.timeline();
+
+export function heroAnimation() {
+    gsap.to('.hero__bgi', { scale: 1, delay: 0, duration: 0.8, });
+    tl.from(".line h1", 2, {
+        y: 500,
+        ease: "power4.out",
+        delay: 1,
+        skewY: 50,
+    })
+    gsap.to('.hero__top', { opacity: 1, delay: 1, duration: 2, });
+    gsap.to('.hero__bottom', { opacity: 1, delay: 1, duration: 2, y: 0 });
+    gsap.to('.header', { opacity: 1, delay: 0.5, duration: 1, y: 0 });
+    gsap.to('.main', { opacity: 1, delay: 0, duration: 1, });
+}
+
+

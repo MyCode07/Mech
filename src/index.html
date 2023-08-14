@@ -6,18 +6,26 @@
 "class":"_home",
 })
 
-<main>
+<main class="main">
     @@include('./html/popup.html',)
-    @@include('./html/notice.html',) 
-  
-    <section class="hero">
-        <img class="hero__bgi" src="img/hero-bgi.png" alt="">
+    @@include('./html/notice.html',)
+
+    <section class="hero fullscreen">
+        <div class="fullscreen__img">
+            <img class="hero__bgi" src="img/hero-bgi.png" alt="">
+        </div>
         <div class="hero__container _container">
             <div class="hero__body">
                 <div class="hero__top">
-                    <label>2023 ModernEcoChaires <br> Collection</label>
-                    <h1>Enjoy moments <br>
-                        of relaxation</h1>
+                    <div class="line">
+                        <h1 class="label">2023 ModernEcoChaires <br> Collection</h1>
+                    </div>
+                    <div class="line">
+                        <h1>Enjoy moments</h1>
+                    </div>
+                    <div class="line">
+                        <h1>of relaxation</h1>
+                    </div>
                 </div>
                 <div class="hero__bottom">
                     <a href="catalog.html" class="_button">
@@ -299,7 +307,7 @@
         <div class="minimalist__container _container">
             <div class="minimalist__body" data-replace-old-position="afterbegin">
                 <div class="minimalist__bigimg" data-hidden>
-                    <img  src="img/minimalist-big.png" alt="" data-replace-element>
+                    <img src="img/minimalist-big.png" alt="" data-replace-element>
                 </div>
 
                 <div class="minimalist__info">

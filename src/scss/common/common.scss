@@ -35,6 +35,7 @@ body {
 
 main {
     flex: 1 1 auto;
+    opacity: 0;
 }
 
 ._container {
@@ -71,11 +72,21 @@ h2 {
 h1 {
     color: #f4f0ea;
     text-transform: uppercase;
-
     @include adaptive-value("font-size", 96, 40, 1);
 }
 
-label + h1 {
+.line {
+    width: 70%;
+    height: 81px;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        position: absolute;
+    }
+}
+
+.label + .line {
     @include adaptive-value("margin-top", 45, 30, 1);
 }
 
