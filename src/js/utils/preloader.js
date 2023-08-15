@@ -4,7 +4,7 @@ import { heroAnimation } from './animations.js';
 
 const heroImage = document.querySelector('.hero__bgi');
 
-if (heroImage) heroImage.onload = runPrelaoder
+if (heroImage) heroImage.addEventListener('load', runPrelaoder)
 else runPrelaoder()
 
 function runPrelaoder() {
