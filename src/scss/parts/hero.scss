@@ -84,12 +84,12 @@
 
             ._scroll-down {
                 position: absolute;
-                bottom: 50px;
+                bottom: -100px;
                 left: 50%;
                 transform: translate(-50%, 0);
 
                 @media (max-height: 550px) {
-                    bottom: 25px;
+                    bottom: -50px;
                 }
             }
         }

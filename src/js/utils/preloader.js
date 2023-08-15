@@ -1,7 +1,13 @@
 import { gsap, Power4 } from "gsap";
 import { heroAnimation } from './animations.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+
+const heroImage = document.querySelector('.hero__bgi');
+
+if (heroImage) heroImage.onload = runPrelaoder
+else runPrelaoder()
+
+function runPrelaoder() {
     const preloader = document.querySelector('.preloader');
     document.body.classList.add('_noscroll')
 
@@ -9,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const icon = document.querySelector('.preloader-icon__before');
 
     const timeline = gsap.timeline();
+
 
     timeline.to(icon, {
         width: 0,
@@ -25,4 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
             heroAnimation();
         }
     })
-})
+}

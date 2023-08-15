@@ -1,4 +1,4 @@
- .catalog {
+.catalog {
     padding-top: 150px;
     margin-bottom: 60px !important;
 
@@ -166,6 +166,7 @@
                 img,
                 svg {
                     width: 10px;
+                    transition: all 0.3s ease 0s;
                 }
             }
 
@@ -222,6 +223,10 @@
                     opacity: 1;
                     visibility: visible;
                     transform: translate3d(0, 0, 0);
+                }
+
+                button img {
+                    transform: rotate(180deg);
                 }
             }
         }

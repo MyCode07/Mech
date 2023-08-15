@@ -48,4 +48,19 @@ document.addEventListener('click', function (e) {
 
         filter.classList.remove('_active')
     }
+
+    if (targetEl.classList.contains('laod-more')) {
+        e.preventDefault();
+        const productsGrid = document.querySelector('.products__flex');
+        const products = document.querySelectorAll('.product__article');
+
+        if (products.length) {
+            targetEl.classList.add('_loading');
+
+            setTimeout(() => {
+                products.forEach(item => productsGrid.append(item.cloneNode(true)));
+                targetEl.remove();
+            }, 2000);
+        }
+    }
 })

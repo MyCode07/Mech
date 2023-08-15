@@ -46,9 +46,6 @@
         &-file {
             border-bottom: unset;
 
-            .file-label {
-            }
-
             .file-input {
                 display: flex;
                 justify-content: space-between;
@@ -98,9 +95,6 @@
                     &:checked + .checkmark {
                         background-image: url("@img/svg/checked.svg");
                     }
-                }
-
-                label {
                 }
 
                 .checkmark {

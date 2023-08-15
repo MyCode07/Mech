@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
         setTimeout(() => {
             notice.classList.add('_open')
             allowClick = true
-        }, 6000);
+        }, 8000);
     }
 
     document.addEventListener('click', function (e) {

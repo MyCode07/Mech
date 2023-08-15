@@ -5,7 +5,11 @@
     z-index: -1;
 
     @media (max-width: 992px) {
-        top: -475px;
+        transform: translate(0, -160%);
+    }
+
+    @media (max-width: 375px) {
+        transform: translate(0, -175%);
     }
 
     @media (any-hover: hover) {

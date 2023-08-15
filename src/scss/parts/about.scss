@@ -94,38 +94,23 @@
         justify-content: space-between;
 
         @media (max-width: 992px) {
-            flex-direction: column-reverse;
-            justify-content: flex-end;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         // .timeless__content-info
 
         &-info {
-            @include adaptive-value("padding-top", 185, 0, 1);
+            position: relative;
+            z-index: 3;
             max-width: 630px;
             width: 100%;
-
-            @media (max-width: 992px) {
-                padding-top: 80%;
-            }
-
-            @media (max-width: 768px) {
-                padding-top: 90%;
-            }
-
-            @media (max-width: 650px) {
-                padding-top: 95%;
-            }
-            @media (max-width: 550px) {
-                padding-top: 120%;
-            }
-            @media (max-width: 400px) {
-                padding-top: 145%;
-            }
+            @include adaptive-value("padding-top", 185, 0, 1);
 
             h2 {
                 @include adaptive-value("margin-bottom", 60, 30, 1);
             }
+
             p {
                 @media (min-width: 768px) {
                     max-width: 550px;
@@ -140,46 +125,51 @@
             position: relative;
             max-width: 700px;
             width: 100%;
-            @include adaptive-value("top", 0, -70, 1);
+            margin-left: 40px;
+
 
             @media (max-width: 992px) {
-                max-width: unset;
+                max-width: 50%;
+                margin-left: auto;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 100px;
             }
 
             img {
-                position: absolute;
-                object-fit: cover;
-                right: 0;
             }
 
             & > :first-child {
-                @include adaptive-value("width", 700, 237, 1);
-                @include adaptive-value("height", 750, 306, 1);
+                margin-left: auto;
+                position: relative;
+
+                top: -70px;
+
+                @media (max-width: 992px) {
+                    margin-top: 30px;
+                    top: 0;
+                    width: 130%;
+                    max-width: none;
+                    margin-left: 0;
+                }
             }
 
             & > :nth-child(2) {
-                @include adaptive-value("width", 386, 186, 1);
-                @include adaptive-value("height", 477, 230, 1);
-                @include adaptive-value("top", 440, 150, 1);
-                @include adaptive-value("right", 520, -50, 1);
+                position: absolute;
 
-                @media (max-width: 992px) {
-                    @include adaptive-value("top", 484, 150, 1);
-                    right: 30%;
-                }
+                @include adaptive-value("width", 386, 186, 1);
+                left: 0;
+                bottom: 0;
+                transform: translate(-50%, 50%);
             }
 
             & > :last-child {
-                @include adaptive-value("width", 386, 176, 1);
-                @include adaptive-value("height", 390, 176, 1);
-                @include adaptive-value("top", 784, 200, 1);
-                @include adaptive-value("right", 700, 100, 1);
-                z-index: 2;
+                position: absolute;
 
-                @media (max-width: 992px) {
-                    @include adaptive-value("top", 784, 300, 1);
-                    right: 50%;
-                }
+                @include adaptive-value("width", 386, 186, 1);
+                left: 0;
+                bottom: 0;
+                transform: translate(-100%, 100%);
             }
         }
     }
