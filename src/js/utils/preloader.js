@@ -1,19 +1,27 @@
 import { gsap, Power4 } from "gsap";
 import { heroAnimation } from './animations.js';
+import { notice } from "./notice.js";
 
+document.body.classList.add('_noscroll')
 
-document.addEventListener('DOMContentLoaded', function (e) {
-    const heroImage = document.querySelector('.hero__bgi');
-    if (heroImage) {
+const heroImage = document.querySelector('.hero__bgi');
+if (heroImage) {
+
+    let interval = setInterval(() => {
         const isLoaded = heroImage.complete && heroImage.naturalHeight !== 0;
-        if (isLoaded) runPrelaoder()
-    }
-    else runPrelaoder()
-})
+        if (isLoaded == true) {
+            runPrelaoder()
+            clearInterval(interval) 
+        }
+    }, 16);
+}
+else {
+    runPrelaoder()
+}
+
 
 function runPrelaoder() {
     const preloader = document.querySelector('.preloader');
-    document.body.classList.add('_noscroll')
 
     if (!preloader) return
     const icon = document.querySelector('.preloader-icon__before');
@@ -34,6 +42,8 @@ function runPrelaoder() {
             document.body.classList.remove('_noscroll')
             preloader.remove();
             heroAnimation();
+
+            notice();
         }
     })
 }

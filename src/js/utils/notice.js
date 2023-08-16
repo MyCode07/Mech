@@ -1,34 +1,34 @@
 import { CookieManager } from "./cookie.js";
 
-document.addEventListener('DOMContentLoaded', function (e) {
+let allowClick = false;
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
     const notice = document.querySelector('.notice');
-    let allowClick = false;
-    const accept = CookieManager.get('accept');
 
+    if (allowClick == true) {
+        if (targetEl.classList.contains('notice__close')) {
+            notice.classList.remove('_open')
+            CookieManager.set('accept', 'accepted');
+        }
+        if (targetEl.classList.contains('accept')) {
+            notice.classList.remove('_open')
+            CookieManager.set('accept', 'accepted');
+        }
+
+        if (!targetEl.closest('.notice') && notice.classList.contains('_open')) {
+            notice.classList.remove('_open')
+            CookieManager.set('accept', 'accepted');
+        }
+    }
+})
+
+export function notice() {
+    const notice = document.querySelector('.notice');
+    const accept = CookieManager.get('accept');
     if (!accept) {
         setTimeout(() => {
             notice.classList.add('_open')
             allowClick = true
-        }, 10000);
+        }, 5000);
     }
-
-    document.addEventListener('click', function (e) {
-        let targetEl = e.target;
-
-        if (allowClick == true) {
-            if (targetEl.classList.contains('notice__close')) {
-                notice.classList.remove('_open')
-                CookieManager.set('accept', 'accepted');
-            }
-            if (targetEl.classList.contains('accept')) {
-                notice.classList.remove('_open')
-                CookieManager.set('accept', 'accepted');
-            }
-
-            if (!targetEl.closest('.notice') && notice.classList.contains('_open')) {
-                notice.classList.remove('_open')
-                CookieManager.set('accept', 'accepted');
-            }
-        }
-    })
-})
+}
