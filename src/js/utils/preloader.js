@@ -2,10 +2,14 @@ import { gsap, Power4 } from "gsap";
 import { heroAnimation } from './animations.js';
 
 
-const heroImage = document.querySelector('.hero__bgi');
-
-if (heroImage) heroImage.addEventListener('load', runPrelaoder)
-else runPrelaoder()
+document.addEventListener('DOMContentLoaded', function (e) {
+    const heroImage = document.querySelector('.hero__bgi');
+    if (heroImage) {
+        const isLoaded = heroImage.complete && heroImage.naturalHeight !== 0;
+        if (isLoaded) runPrelaoder()
+    }
+    else runPrelaoder()
+})
 
 function runPrelaoder() {
     const preloader = document.querySelector('.preloader');
