@@ -20,7 +20,7 @@ if (popupOpenButtons.length)
                 }
             }
         })
-    })
+    }) 
 
 if (popupAll.length)
     popupAll.forEach(popup => {

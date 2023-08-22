@@ -168,10 +168,16 @@
     }
 
     &.comfort {
-        height: 120vh;
+        @media (min-width: 1025px) {
+            height: 90vh;
+        }
+
+        @media (max-width: 1024px) {
+            height: 70vh;
+        }
 
         @media (max-width: 768px) {
-            height: 70vh;
+            height: 50vh;
         }
 
         .fullscreen__container {
@@ -215,6 +221,10 @@
                 @include adaptive-value("font-size", 36, 16, 1);
                 max-width: 700px;
                 margin-bottom: 30px;
+
+                @media (max-width: 768px) {
+                    max-width: 310px;
+                }
             }
         }
 
@@ -234,6 +244,18 @@
     }
 
     &.new {
+        @media (min-width: 1025px) {
+            height: 90vh;
+        }
+
+        @media (max-width: 1024px) {
+            height: 70vh;
+        }
+
+        @media (max-width: 768px) {
+            height: 50vh;
+        }
+
         .fullscreen__body {
             margin-left: unset;
             margin-right: auto;

@@ -21,7 +21,14 @@
 
     &__bigimg {
         overflow: hidden;
-        width: 45%;
+        max-width: 45%;
+        width: 100%;
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+
     }
 
     // .minimalist__info
