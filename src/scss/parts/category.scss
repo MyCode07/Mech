@@ -19,15 +19,36 @@
         display: flex;
         align-items: center;
 
-        @media (max-width: 768px) {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
+        @media (any-hover: none) {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            overflow-x: auto;
 
-            & > :not(:last-child) {
-                margin-bottom: 50px;
+            @media (max-width: $containerWithPadding + px) {
+                padding-inline: $padding + px;
             }
+
+            @media (max-width: 1200px) {
+                padding-inline: 0 30px;
+            }
+
+            @media (max-width: 1024px) {
+                padding-inline: 20px;
+            }
+
+            @media (max-width: 768px) {
+                padding-inline: 15px;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        & > :not(:last-child) {
+            @include adaptive-value("margin-right", 150, 30, 1);
         }
     }
 
@@ -38,27 +59,26 @@
         justify-content: space-between;
         align-items: center;
         flex: 0 0 auto;
+        min-width: 50%;
 
-        @media (min-width: 769px) {
-            @include adaptive-value("padding-left", 150, 20, 1);
-            @include adaptive-value("padding-right", 150, 20, 1);
-        }
+        @media (max-width: 1024px) {
+            min-width: 0;
+            @include adaptive-value("width", 900, 300, 1);
 
-        @media (max-width: 768px) {
-            justify-content: flex-start;
-        }
-
-        @media (max-width: 520px) {
             display: block;
         }
 
         // .category__article-img
 
         &-img {
-            margin-right: 30px;
-            min-width: 433px;
-            min-height: 520px;
             position: relative;
+            width: 50%;
+            display: block;
+            padding-bottom: 60%;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
 
             img {
                 position: absolute;
@@ -68,44 +88,27 @@
                 height: 100%;
                 width: 100%;
             }
-
-            @media (max-width: 1024px) {
-                min-width: 240px;
-                min-height: 280px;
-            }
-
-            @media (max-width: 520px) {
-                min-width: 100%;
-                min-height: 278px;
-                max-height: 278px;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
         }
 
         // .category__article-info
 
         &-info {
-            h2 {
-                min-width: 390px;
+            width: 50%;
+            padding-left: 30px;
+
+            @media (max-width: 1024px) {
                 width: 100%;
-                margin-bottom: 30px;
-
-                @media (max-width: 520px) {
-                    min-width: unset;
-                    margin-bottom: 10px;
-
-                    text-align: center;
-
-                    br {
-                        display: none;
-                    }
-                }
+                padding-left: 0;
+                margin-top: 10px;
             }
 
-            @media (max-width: 520px) {
-                a {
-                    margin-inline: auto;
+            h2 {
+                margin-bottom: 1em;
+
+                @media (max-width:1024px){
+                    br{
+                        display: none;
+                    }
                 }
             }
         }
