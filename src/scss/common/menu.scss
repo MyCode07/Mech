@@ -133,6 +133,10 @@
 
                         transition: 0.5s;
 
+                        &._noblur{
+                            filter: unset !important;
+                        }
+
                         @media (min-width: 769px) {
                             @include adaptive-value("font-size", 96, 30, 1);
                         }

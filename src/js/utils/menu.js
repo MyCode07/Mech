@@ -1,19 +1,37 @@
+import { gsap } from 'gsap'
 import { isMobile } from './isMobile.js'
-import { lockPadding } from './popup.js' 
+import { lockPadding, unLockPadding } from './popup.js'
 
 const body = document.body;
 const menu = document.querySelector('.menu');
 const burger = document.querySelector('.header__burger');
 const menuLinks = document.querySelectorAll('.menu li a');
-
+const header = document.querySelector('.header');
 if (burger) {
     burger.addEventListener('click', (е) => {
-        menu.classList.add('_active');
-        document.body.classList.add('_noscroll');
+        menu.classList.toggle('_active');
+        burger.classList.toggle('_active');
+
+        if (!header.classList.contains('_scrolled')) {
+            header.classList.toggle('_sticky')
+        }
+
+        document.body.classList.toggle('_noscroll');
+
+        if (!isMobile.any()) {
+            if (document.body.classList.contains('_noscroll')) {
+                lockPadding()
+            }
+            else {
+                unLockPadding();
+            }
+        }
     })
 }
 
 if (menuLinks.length) {
+    const menuImage = document.querySelector('.menu__top-img');
+
     menuLinks.forEach(link => {
         link.addEventListener('click', (е) => {
             if (!isMobile.any())
@@ -25,7 +43,17 @@ if (menuLinks.length) {
 
             body.classList.toggle('_noscroll');
         })
-    }) 
+
+        if (!isMobile.any()) {
+            link.addEventListener('mouseenter', (е) => {
+                menuImage.src = link.closest('li').dataset.img
+                link.classList.add('_noblur')
+            })
+            link.addEventListener('mouseleave', (е) => {
+                link.classList.remove('_noblur')
+            })
+        }
+    })
 }
 
 
@@ -34,7 +62,7 @@ const arrow = `<button><svg width="14" height="8" viewBox="0 0 14 8" xmlns="http
 </svg></button>
 `;
 
-const submenuList = document.querySelectorAll('nav ul li'); 
+const submenuList = document.querySelectorAll('nav ul li');
 if (submenuList.length) {
     submenuList.forEach(li => {
         const submenu = li.querySelector('ul');
